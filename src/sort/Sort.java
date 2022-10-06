@@ -1,6 +1,7 @@
 package sort;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Sort {
 
@@ -64,9 +65,15 @@ public class Sort {
 		return true;
 	}
 
-  public static <E> void printArray(ArrayList<E> arrayList) {
-		for (E a : arrayList) {
-			System.out.print(a + ", ");
+  public static <E> void swap(List<E> list, int i, int j) {
+    E temp = list.get(i);
+    list.set(i, list.get(j));
+    list.set(j, temp);
+  }
+
+  public static void printArray(List<?> list) {
+		for (Object obj : list) {
+			System.out.print(obj + ", ");
 		}
 		System.out.println();
 	}

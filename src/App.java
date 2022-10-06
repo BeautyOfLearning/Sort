@@ -8,7 +8,7 @@ public class App {
   
 	@SuppressWarnings("unchecked")
 	public static <E extends Comparable<E>> ArrayList<E> createRandomArray(int arrayLength, String typeName) {
-		ArrayList<E> arrayList = new ArrayList<E>(arrayLength);
+		ArrayList<E> arrayList = new ArrayList<>(arrayLength);
 		Random random = new Random();
 		for (int i = 0; i < arrayLength; i++) {
 			switch (typeName) {
